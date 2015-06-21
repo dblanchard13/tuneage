@@ -66,6 +66,9 @@ var app = angular.module('tunes', [])
     };
 
     $scope.queue.push(song);
+    if(!player.playing && !player.paused){
+      $scope.play();
+    }
   };
 
   $scope.removeFromQueue = function(){
