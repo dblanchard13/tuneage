@@ -1,0 +1,118 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.songs-list-artist {
+  margin: 0px;
+}
+
+.songs-list-title {
+  margin: 15px 0px 0px 0px;
+}
+
+.song-in-list {
+  padding: 5px !important;
+}
+
+#init-instructions {
+  font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  display: inline;
+  color: white;
+  cursor: w-resize;
+}
+
+.testtest {
+  font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #f44336 !important;
+}
+
+.music-controls-left {
+  position: relative;
+}
+
+.music-controls-right {
+  position: relative;
+}
+
+
+.button {
+  font-size: 150px;
+  cursor: pointer;
+}
+
+.button.activated {
+  color: #f44336;
+}
+
+.pipe {
+}
+
+body > .container-fluid { overflow-x: hidden; }
+#source-button {
+  position: absolute;
+  top: -25px;
+  right: -15px;
+  z-index: 5;
+  font-weight: 700;
+}
+
+.bs-component { position: relative; }
+.bs-component .modal {
+  position: relative;
+  top: auto;
+  right: auto;
+  left: auto;
+  bottom: auto;
+  z-index: 1;
+  display: block;
+  overflow: visible;
+}
+.bs-component .modal-dialog { width: 80%; }
+
+footer { 
+  margin-top: 30px;
+  padding: 20px 0;
+}
+
+#topbar.toolbar-expanded {
+  height: 400px;
+  position: relative;
+}
+
+#topbar.fixed {
+  position: fixed;
+  top: -335px;
+  width: 100%;
+  z-index: 10;
+
+  transform: translate3d(0,0,0);
+  box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+}
+
+.nav-placeholder { height: 400px; display: none;}
+.nav-placeholder.show { display: block;}
+
+.toolbar-fixed { 
+  position: fixed;
+  width: 100%;
+  height: 55px;
+  top: 0;
+  z-index: 11;
+}
+
+.toolbar .header-title {
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  font-size: 62px;
+  margin-left: 55px;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+.toolbar .header-title.small {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+#headerToggle { color: rgba(255,255,255,.9);}

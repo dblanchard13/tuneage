@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Tuneage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <link href='http://fonts.googleapis.com/css?family=Roboto:500,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/animate.css" type="text/css">
+    <link rel="stylesheet" href="css/materia.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+      
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>  
+    <script src="js/assets/jquery.min.js"></script>
+    <script src="js/assets/jquery.easing.js"></script>
+    <script src="js/assets/bootstrap.min.js"></script>
+    <script src="js/assets/jquery.mtr-ripple.js"></script>
+    <script src="js/assets/jquery.mtr-panel.js"></script>
+    <script src="js/assets/jquery.mtr-header.js"></script>
+
+  </head>
+  <body class="mtr-grey-50" ng-app="tunes" ng-controller="navbarCtrl">
+    <!-- Off canvas menu for mobile -->
+    <nav class="navbar-panel">
+      <div class="header container-fluid mtr-red-500">
+        <div class="row">
+          <div class="col-xs-12">
+            <h2 class="songs-list-title"><b>Songs</b></h2>
+            <h4 class="songs-list-artist">By Aaliyah</h4>
+            <div class="content">
+              <ul class="nav">
+                <li ng-repeat="song in songs"><a class="song-in-list" ng-click="addToQueue()" href="#">{{song.title}}</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="content mtr-grey-100">
+        <ul class="nav">
+          <li ng-repeat="song in queue"><a ng-click="removeFromQueue()" href="#">{{song.title}}</a></li>
+        </ul>
+      </div>
+    
+    </nav>
+
+    <!-- top navbar -->
+    <nav id="topbar" class="toolbar toolbar-expanded mtr-light-blue-800">
+      <div class="container-fluid header-title">
+        <div class="row">
+          <div class="col-sm-12">Tunes  -  Jams  -  Tracks  -  Aaliyah</div>
+        </div>
+      </div>
+    </nav>
+
+    <nav class="toolbar toolbar-fixed">
+      <div class="container-fluid">
+        
+        <div class="toolbar-header">
+          <a  id="headerToggle" href="#" class="menu-toggle" data-ripple-centered="true" data-ripple-color="#fff">
+            <i class="md md-menu init-menu"></i> 
+          </a>
+          <div id="init-instructions"><i class="material-icons">reply</i>CLICK ME!</div>
+          
+        </div>
+      </div>
+    </nav>
+
+    <div class="nav-placeholder"></div>
+
+    <div class="container-fluid">
+
+      <div class="page-header" id="banner">
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="col-sm-5 text-center music-controls-left">
+            <!-- <a><i class="material-icons button mute">volume_off</i></a> -->
+            <a><i ng-click="mute()" class="material-icons button mute activated">volume_up</i></a>
+            <a><i ng-click="loop()" class="material-icons button loop">loop</i></a>
+          </div>
+
+          <div class="col-sm-5 text-center music-controls-right">          
+            <a><i ng-click="pause()" class="material-icons button pause">pause</i></a>
+            <a><i ng-click="play()" class="material-icons button play">play_arrow</i></a>
+            <a><i ng-click="next()" class="material-icons button skip">skip_next</i></a>
+          </div>
+          <div class="col-sm-1"></div>
+
+        </div>
+      </div>
+
+    </div>
+
+      
+
+    <script src="js/scripts/app.js"></script>
+    <script src="js/scripts/listeners.js"></script>
+
+  </body>
+</html>
