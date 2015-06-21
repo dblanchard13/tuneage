@@ -11,6 +11,15 @@ html, body {
   margin: 15px 0px 0px 0px;
 }
 
+.songs-list-playlist {
+  margin: 15px;
+}
+
+.song-in-playlist {
+  padding: 5px !important;
+  margin-left: 20px;
+}
+
 .song-in-list {
   padding: 5px !important;
 }

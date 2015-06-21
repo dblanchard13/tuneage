@@ -43,8 +43,9 @@
 
 
       <div class="content mtr-grey-100">
+        <h2 class="songs-list-playlist"><b>Playlist</b></h2>
         <ul class="nav">
-          <li ng-repeat="song in queue"><a ng-click="removeFromQueue()" href="#">{{song.title}}</a></li>
+          <li ng-repeat="song in queue"><a class="song-in-playlist" ng-click="removeFromQueue()" href="#">{{song.title}}</a></li>
         </ul>
       </div>
     
